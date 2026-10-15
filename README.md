@@ -6,12 +6,12 @@ Site estático em HTML, CSS e JavaScript puro, sem dependências nem etapa de bu
 
 ## Rodar no computador
 
-Qualquer servidor estático serve. Na raiz do repositório:
+Os arquivos do site ficam em `public/`. Qualquer servidor estático serve:
 
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8080 -d public
 # ou
-npx serve .
+npx serve public
 ```
 
 Depois é só abrir http://localhost:8080.
@@ -28,26 +28,35 @@ Interações demonstrativas: menu do celular, busca ao vivo, sacola lateral com 
 
 Os produtos ficam em `assets/js/data.js`. Para trocar nome, preço ou foto, basta editar esse arquivo.
 
-## Publicar no Cloudflare Pages
+## Publicar no Cloudflare
 
-### Opção A: pelo GitHub (recomendado)
+O repositório já tem o `wrangler.jsonc`, que manda publicar só a pasta `public/`.
 
-1. No painel do Cloudflare, abra **Workers e Pages → Criar → Pages → Conectar ao Git** e escolha o repositório `LOMODE`.
-2. Em **Branch de produção**, deixe `main`.
-3. Configurações de build:
-   - **Framework**: nenhum
-   - **Comando de build**: deixe em branco
-   - **Diretório de saída**: `/` (a raiz do repositório)
-4. Clique em **Salvar e implantar**. O endereço sai no formato `https://<nome-do-projeto>.pages.dev`, e cada novo commit no `main` atualiza o site sozinho.
+### Workers (fluxo padrão do painel: Workers e Pages → Criar → Importar repositório)
 
-### Opção B: pela linha de comando
+Em **Configurações → Build** do projeto:
+
+| Campo | Valor |
+| --- | --- |
+| Branch | `main` |
+| Comando de build | deixe em branco |
+| Comando de deploy | `npx wrangler deploy` |
+| Diretório raiz | deixe em branco |
+
+Salve e clique em **Tentar novamente** (ou faça um novo commit). O endereço sai no formato `https://<nome-do-projeto>.<sua-conta>.workers.dev`. Cada commit no `main` atualiza o site sozinho. O nome do projeto no painel não precisa ser igual ao do `wrangler.jsonc`, porque o Cloudflare ajusta isso automaticamente.
+
+### Pages (alternativa)
+
+Se preferir Pages: comando de build em branco e **diretório de saída** `public`.
+
+### Pela linha de comando
 
 ```bash
 npx wrangler login
-npx wrangler pages deploy . --project-name lomode-prototipo
+npx wrangler deploy
 ```
 
-O arquivo `_headers` já configura cache para fontes e imagens. Ele também, junto com o `robots.txt`, pede aos buscadores que não indexem o protótipo.
+O arquivo `public/_headers` configura o cache de fontes e imagens. Junto com o `robots.txt`, ele também pede aos buscadores que não indexem o protótipo.
 
 ## Antes de virar loja de verdade
 
