@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Produto · Lomode</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FCFBF8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="product">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+
+  <main id="conteudo">
+    <div class="container pdp__crumbs"><nav class="crumbs" aria-label="Você está em" data-crumbs></nav></div>
+    <div class="container pdp">
+      <div class="gallery__wrap">
+        <div class="gallery" data-gallery></div>
+        <div class="gallery__dots" data-gallery-dots aria-hidden="true"></div>
+      </div>
+      <div class="info" data-info></div>
+    </div>
+
+    <section class="section section--linen section--tight" aria-labelledby="t-complete">
+      <div class="container">
+        <div class="shead"><div><span class="eyebrow">Combina com</span><h2 class="h2" id="t-complete">Complete <em>o look</em></h2></div></div>
+        <div class="grid" data-complete></div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="t-similar">
+      <div class="container">
+        <div class="shead">
+          <div><span class="eyebrow">Para você</span><h2 class="h2" id="t-similar">Você também <em>vai gostar</em></h2></div>
+          <div class="shead__side">
+            <a class="link" href="colecao.html?c=novidades">Ver novidades <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+            <div class="arrows">
+              <button class="arrow" type="button" data-rail-prev="sim" aria-label="Anterior"><svg class="i" aria-hidden="true"><use href="#i-left"></use></svg></button>
+              <button class="arrow" type="button" data-rail-next="sim" aria-label="Próximo"><svg class="i" aria-hidden="true"><use href="#i-right"></use></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="rail" data-rail="sim">
+          <div class="rail__track" data-similar></div>
+          <div class="rail__progress"><span></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-buy" data-sticky-buy></div>
+
+  <div class="modal" data-modal role="dialog" aria-modal="true" aria-labelledby="t-sizes">
+    <div class="modal__box">
+      <button class="icon-btn modal__close" type="button" data-modal-close aria-label="Fechar"><svg class="i" aria-hidden="true"><use href="#i-close"></use></svg></button>
+      <h2 class="h3" id="t-sizes">Guia de <em>medidas</em></h2>
+      <p>Medidas do corpo, em centímetros. Na dúvida entre dois tamanhos, escolha o maior para um caimento mais solto.</p>
+      <table class="table">
+        <thead><tr><th>Tamanho</th><th>Busto</th><th>Cintura</th><th>Quadril</th></tr></thead>
+        <tbody>
+          <tr><td>PP · 34</td><td>80–84</td><td>62–66</td><td>88–92</td></tr>
+          <tr><td>P · 36</td><td>84–88</td><td>66–70</td><td>92–96</td></tr>
+          <tr><td>M · 38/40</td><td>88–94</td><td>70–76</td><td>96–102</td></tr>
+          <tr><td>G · 42</td><td>94–100</td><td>76–82</td><td>102–108</td></tr>
+          <tr><td>GG · 44</td><td>100–106</td><td>82–88</td><td>108–114</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+  <script>Lomode.renderFooter();</script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

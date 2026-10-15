@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lomode · Moda feminina atemporal</title>
+  <meta name="description" content="Lomode: alfaiataria fluida, tricôs e acessórios para um guarda-roupa inteligente. Protótipo visual de loja virtual.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FCFBF8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-1.webp" as="image" media="(min-width: 641px)">
+  <link rel="preload" href="assets/img/hero-1-m.webp" as="image" media="(max-width: 640px)">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="home">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+
+  <main id="conteudo">
+
+    <!-- ===== Banner principal ===== -->
+    <section class="hero" aria-roledescription="carrossel" aria-label="Destaques">
+      <div class="hero__slide hero__slide--a is-active" data-theme="light" aria-roledescription="slide" aria-label="1 de 3">
+        <div class="hero__media">
+          <picture>
+            <source media="(max-width: 640px)" srcset="assets/img/hero-1-m.webp">
+            <img src="assets/img/hero-1.webp" alt="Mulher de casaco areia diante de um arco de luz em estúdio claro" width="2000" height="1290" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__content container">
+          <div class="hero__copy">
+            <span class="eyebrow">Inverno 26 · Nova coleção</span>
+            <h1 class="display">Presença<br><em>em silêncio</em></h1>
+            <p class="lead">Alfaiataria fluida, tricôs macios e tons de areia para vestir o essencial com intenção.</p>
+            <div class="hero__actions">
+              <a class="btn" href="colecao.html?c=novidades">Comprar a coleção <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+              <a class="link" href="#look">Ver o look</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__slide hero__slide--b" data-theme="light" aria-roledescription="slide" aria-label="2 de 3">
+        <div class="hero__tri">
+          <figure><img src="assets/img/look-1.webp" alt="Look com blazer de alfaiataria areia e calça pantalona rosé" width="1200" height="1600" loading="lazy"></figure>
+          <div class="hero__panel">
+            <div class="hero__copy">
+              <span class="eyebrow">Edição especial</span>
+              <h2 class="display">Básico <span class="hero__times">×</span><em>Elegante</em></h2>
+              <p class="lead">As mesmas peças-chave, duas leituras. Monte a sua versão do guarda-roupa inteligente.</p>
+              <div class="hero__actions"><a class="btn" href="#guia">Montar meu look <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+            </div>
+          </div>
+          <figure><img src="assets/img/look-2.webp" alt="Look com suéter de tricô chocolate e jeans claro" width="1143" height="1600" loading="lazy"></figure>
+        </div>
+      </div>
+
+      <div class="hero__slide hero__slide--c" data-theme="dark" aria-roledescription="slide" aria-label="3 de 3">
+        <div class="hero__split">
+          <figure>
+            <picture>
+              <source media="(max-width: 960px)" srcset="assets/img/hero-3-m.webp">
+              <img src="assets/img/hero-3.webp" alt="Arara com tricôs em tons de cru, caramelo e café" width="1200" height="900" loading="lazy">
+            </picture>
+          </figure>
+          <div class="hero__dark">
+            <div class="hero__copy">
+              <span class="eyebrow">Tricôs</span>
+              <h2 class="display">Feitos para<br><em>abraçar</em></h2>
+              <p class="lead">Texturas encorpadas em café, cru e caramelo. Peças para repetir o inverno inteiro.</p>
+              <div class="hero__actions"><a class="btn btn--light" href="colecao.html?c=tricos">Comprar tricôs <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__ui container">
+        <div class="hero__dots" role="tablist" aria-label="Escolher destaque">
+          <button class="hero__dot is-active" type="button" role="tab" aria-label="Destaque 1"><span></span></button>
+          <button class="hero__dot" type="button" role="tab" aria-label="Destaque 2"><span></span></button>
+          <button class="hero__dot" type="button" role="tab" aria-label="Destaque 3"><span></span></button>
+          <span class="hero__count" data-hero-count>01 / 03</span>
+        </div>
+        <div class="hero__arrows">
+          <button class="hero__arrow" type="button" data-hero="-1" aria-label="Destaque anterior"><svg class="i" aria-hidden="true"><use href="#i-left"></use></svg></button>
+          <button class="hero__arrow" type="button" data-hero="1" aria-label="Próximo destaque"><svg class="i" aria-hidden="true"><use href="#i-right"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Benefícios ===== -->
+    <section class="perks" aria-label="Vantagens">
+      <ul class="perks__list container">
+        <li class="perk"><svg class="i" aria-hidden="true"><use href="#i-truck"></use></svg><p><b>Frete grátis</b><span>acima de R$ 499</span></p></li>
+        <li class="perk"><svg class="i" aria-hidden="true"><use href="#i-card"></use></svg><p><b>Até 6x sem juros</b><span>em todos os cartões</span></p></li>
+        <li class="perk"><svg class="i" aria-hidden="true"><use href="#i-pix"></use></svg><p><b>5% off no Pix</b><span>desconto automático</span></p></li>
+        <li class="perk"><svg class="i" aria-hidden="true"><use href="#i-swap"></use></svg><p><b>Primeira troca grátis</b><span>em até 30 dias</span></p></li>
+      </ul>
+    </section>
+
+    <!-- ===== Categorias ===== -->
+    <section class="section section--tight" aria-labelledby="t-cats">
+      <div class="container">
+        <div class="shead reveal">
+          <div><span class="eyebrow">Navegue por</span><h2 class="h2" id="t-cats">Categorias</h2></div>
+          <a class="link" href="colecao.html?c=roupas">Ver tudo <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="cats">
+          <a class="cat reveal" href="colecao.html?c=alfaiataria"><div class="cat__img"><img src="assets/img/cat-alfaiataria.webp" alt="" loading="lazy" width="720" height="960"></div><p class="cat__name">Alfaiataria<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Blazers e pantalonas</span></a>
+          <a class="cat reveal reveal-d1" href="colecao.html?c=tricos"><div class="cat__img"><img src="assets/img/cat-tricos.webp" alt="" loading="lazy" width="720" height="960"></div><p class="cat__name">Tricôs<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Suéteres e cardigãs</span></a>
+          <a class="cat reveal reveal-d2" href="colecao.html?c=camisaria"><div class="cat__img"><img src="assets/img/cat-camisaria.webp" alt="" loading="lazy" width="720" height="960"></div><p class="cat__name">Camisaria<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Camisas e blusas</span></a>
+          <a class="cat reveal reveal-d3" href="colecao.html?c=casacos"><div class="cat__img"><img src="assets/img/cat-casacos.webp" alt="" loading="lazy" width="503" height="670"></div><p class="cat__name">Casacos<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Trench e mantôs</span></a>
+          <a class="cat reveal reveal-d2" href="colecao.html?c=bolsas"><div class="cat__img"><img src="assets/img/cat-bolsas.webp" alt="" loading="lazy" width="720" height="960"></div><p class="cat__name">Bolsas<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Couro e canvas</span></a>
+          <a class="cat reveal reveal-d3" href="colecao.html?c=joias"><div class="cat__img"><img src="assets/img/cat-acessorios.webp" alt="" loading="lazy" width="720" height="960"></div><p class="cat__name">Joias<svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></p><span class="cat__count">Dourados e relógios</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Lançamentos ===== -->
+    <section class="section section--tight" aria-labelledby="t-new" style="padding-top:0">
+      <div class="container">
+        <div class="shead reveal">
+          <div><span class="eyebrow">Acabou de chegar</span><h2 class="h2" id="t-new">Lançamentos <em>Inverno 26</em></h2></div>
+          <div class="shead__side">
+            <a class="link" href="colecao.html?c=novidades">Ver tudo <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+            <div class="arrows">
+              <button class="arrow" type="button" data-rail-prev="new" aria-label="Anterior"><svg class="i" aria-hidden="true"><use href="#i-left"></use></svg></button>
+              <button class="arrow" type="button" data-rail-next="new" aria-label="Próximo"><svg class="i" aria-hidden="true"><use href="#i-right"></use></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="rail reveal" data-rail="new">
+          <div class="rail__track" data-shelf="blazer-alfaiataria-areia,sueter-decote-v-chocolate,casaco-gola-pelucia,calca-pantalona-rose,camisa-fluida-off-white,trico-trancas-cafe,calca-wide-leg-cafe,blazer-linho-off-white,camisa-cetim-champagne"></div>
+          <div class="rail__progress"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Guarda-roupa inteligente ===== -->
+    <section class="section section--linen" id="guia" aria-labelledby="t-guide">
+      <div class="container guide">
+        <div class="guide__stage reveal" data-guide-stage>
+          <img class="is-active" src="assets/img/cat-alfaiataria.webp" alt="Blazer de alfaiataria areia" loading="lazy" width="720" height="960">
+          <img src="assets/img/p-camisa-off.webp" alt="Camisa fluida off white" loading="lazy" width="900" height="1200">
+          <img src="assets/img/p-pantalona.webp" alt="Calça pantalona rosé" loading="lazy" width="900" height="1200">
+          <img src="assets/img/p-sueter.webp" alt="Suéter de tricô chocolate" loading="lazy" width="900" height="1200">
+          <img src="assets/img/p-bolsa-hobo.webp" alt="Bolsa hobo de couro chocolate" loading="lazy" width="900" height="1200">
+          <span class="guide__tag" data-guide-tag>01 · Blazer de alfaiataria</span>
+        </div>
+        <div class="guide__copy reveal reveal-d1">
+          <span class="eyebrow">Guarda-roupa inteligente</span>
+          <h2 class="h2" id="t-guide">Cinco peças,<br><em>infinitos</em> looks</h2>
+          <p class="lead">Menos excesso, mais intenção. Comece pelo essencial e multiplique as combinações: cada peça conversa com todas as outras.</p>
+          <ol class="guide__list" data-guide>
+            <li class="guide__item is-active"><a href="produto.html?id=blazer-alfaiataria-areia"><span class="guide__name">Blazer de alfaiataria</span><span class="guide__hint"><span>Ver peça</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></li>
+            <li class="guide__item"><a href="produto.html?id=camisa-fluida-off-white"><span class="guide__name">Camisa fluida off white</span><span class="guide__hint"><span>Ver peça</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></li>
+            <li class="guide__item"><a href="produto.html?id=calca-pantalona-rose"><span class="guide__name">Calça pantalona</span><span class="guide__hint"><span>Ver peça</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></li>
+            <li class="guide__item"><a href="produto.html?id=sueter-decote-v-chocolate"><span class="guide__name">Tricô em tom neutro</span><span class="guide__hint"><span>Ver peça</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></li>
+            <li class="guide__item"><a href="produto.html?id=bolsa-hobo-couro"><span class="guide__name">Bolsa de couro estruturada</span><span class="guide__hint"><span>Ver peça</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span></a></li>
+          </ol>
+          <div class="guide__cta"><a class="btn btn--ghost" href="colecao.html?c=roupas">Ver os essenciais <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Compre o look ===== -->
+    <section class="section section--sand" id="look" aria-labelledby="t-look">
+      <div class="container look" data-look>
+        <div class="look__img reveal">
+          <img src="assets/img/look-3.webp" alt="Mulher de blazer de linho off white, chapéu e óculos escuros em um café" loading="lazy" width="968" height="1613">
+          <button class="hotspot" type="button" style="left:54%;top:33%" data-hot="oculos-gatinho-preto" aria-label="Ver óculos de sol gatinho"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+          <button class="hotspot" type="button" style="left:57%;top:60%" data-hot="blazer-linho-off-white" aria-label="Ver blazer de linho"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+          <button class="hotspot" type="button" style="left:66.5%;top:40.5%" data-hot="brinco-argola-canelada" aria-label="Ver brinco argola"><svg class="i" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+        </div>
+        <div class="look__copy reveal reveal-d1">
+          <span class="eyebrow">Compre o look</span>
+          <h2 class="h2" id="t-look">Café às <em>dez</em></h2>
+          <p class="lead">Blazer de linho, óculos gatinho e dourado na medida certa: o uniforme das manhãs sem pressa.</p>
+          <div class="look__items" data-look-items="blazer-linho-off-white,oculos-gatinho-preto,brinco-argola-canelada"></div>
+          <div class="look__total">
+            <p>Leve o look completo<b data-look-total></b></p>
+            <button class="btn" type="button" data-look-all>Adicionar o look <svg class="i" aria-hidden="true"><use href="#i-bag"></use></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Acessórios ===== -->
+    <section class="section" aria-labelledby="t-acc">
+      <div class="container">
+        <div class="shead shead--center reveal">
+          <span class="eyebrow">Finalize com</span>
+          <h2 class="h2" id="t-acc">Acessórios <em>que assinam</em></h2>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="Filtrar acessórios" data-tabs="acc">
+          <button class="tab" type="button" role="tab" aria-selected="true" data-tab="">Todos</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="Bolsas">Bolsas</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="Sapatos">Sapatos</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="Joias">Joias e relógios</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="Inverno">Inverno</button>
+        </div>
+        <div class="grid" data-tab-grid="acc"></div>
+        <div class="center"><a class="btn btn--ghost" href="colecao.html?c=acessorios">Ver todos os acessórios <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ===== Banners ===== -->
+    <section class="section section--tight" style="padding-top:0" aria-label="Campanhas">
+      <div class="container duo">
+        <a class="promo reveal" href="colecao.html?c=casacos">
+          <img src="assets/img/ed-cabana.webp" alt="Três pessoas com casacos e cachecóis em tons neutros numa cabana" loading="lazy" width="1200" height="670">
+          <div class="promo__copy">
+            <span class="eyebrow">Lookbook Inverno 26</span>
+            <h2 class="h2">Dias frios,<br><em>tons quentes</em></h2>
+            <span class="link">Ver casacos <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+          </div>
+        </a>
+        <a class="promo promo--sand reveal reveal-d1" href="colecao.html?c=bolsas">
+          <img src="assets/img/p-bolsa-hobo.webp" alt="Bolsa hobo de couro chocolate" loading="lazy" width="900" height="1200">
+          <div class="promo__copy">
+            <span class="eyebrow">Couro legítimo</span>
+            <h2 class="h2">Bolsas que <em>duram</em></h2>
+            <span class="link">Comprar bolsas <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Instagram ===== -->
+    <section class="section section--tight" style="padding-top:clamp(24px,4vw,48px)" aria-labelledby="t-ig">
+      <div class="container">
+        <div class="shead shead--center reveal">
+          <span class="eyebrow">Siga a gente</span>
+          <h2 class="handle" id="t-ig">@lomode</h2>
+        </div>
+        <div class="insta reveal">
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Ela ainda vive em você"><img src="assets/img/ig-1.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Como montar um guarda-roupa inteligente"><img src="assets/img/ig-2.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Básico x Elegante"><img src="assets/img/ig-3.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Looks para cada estação do ano"><img src="assets/img/ig-4.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Multiplicando o seu guarda-roupa"><img src="assets/img/ig-5.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+          <a href="#" data-demo="Instagram @lomode" aria-label="Post: Looks que eu usaria para"><img src="assets/img/ig-6.webp" alt="" loading="lazy" width="300" height="400"><svg class="i" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+        </div>
+        <div class="center" style="margin-top:36px"><a class="link" href="#" data-demo="Instagram @lomode">Seguir no Instagram <svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="section section--linen" aria-labelledby="t-news">
+      <div class="container news">
+        <div class="reveal">
+          <span class="eyebrow">Lista Lomode</span>
+          <h2 class="h2" id="t-news">Ganhe <em>10% off</em><br>na primeira compra</h2>
+        </div>
+        <div class="reveal reveal-d1" data-news>
+          <p class="lead" style="margin-bottom:22px">Lançamentos, guias de estilo e acesso antecipado às coleções, direto no seu e-mail.</p>
+          <form class="news__form" novalidate>
+            <label class="sr-only" for="news-email">Seu e-mail</label>
+            <input id="news-email" type="email" placeholder="Seu melhor e-mail" autocomplete="email" required>
+            <button type="submit"><span>Quero receber</span><svg class="i" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </form>
+          <p class="news__fine">Ao se inscrever, você concorda com a nossa política de privacidade. Sem spam, prometido.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script>Lomode.renderFooter();</script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

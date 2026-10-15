@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Coleção · Lomode</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FCFBF8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="collection">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header"></header>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/layout.js"></script>
+
+  <main id="conteudo">
+    <section class="plp-hero">
+      <div class="container plp-hero__inner">
+        <div>
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span data-plp-crumb>Coleção</span></nav>
+          <h1 class="display" data-plp-title>Coleção</h1>
+          <p class="lead" data-plp-desc></p>
+          <div class="chips" data-plp-chips></div>
+        </div>
+        <div class="plp-hero__img"><img data-plp-img src="assets/img/look-1.webp" alt="" width="1200" height="1600"></div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <button class="toolbar__btn" type="button" data-filters-toggle><svg class="i" aria-hidden="true"><use href="#i-filter"></use></svg><span>Ocultar filtros</span></button>
+        <p class="toolbar__count" data-plp-count></p>
+        <label class="sort">Ordenar:
+          <select data-sort aria-label="Ordenar produtos">
+            <option value="rel">Relevância</option>
+            <option value="new">Novidades</option>
+            <option value="asc">Menor preço</option>
+            <option value="desc">Maior preço</option>
+          </select>
+          <svg class="i" aria-hidden="true"><use href="#i-down"></use></svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="container plp">
+      <aside class="filters" aria-label="Filtros" aria-hidden="false">
+        <div class="filters__head"><p>Filtros</p><button class="icon-btn" type="button" data-close aria-label="Fechar filtros"><svg class="i" aria-hidden="true"><use href="#i-close"></use></svg></button></div>
+        <div data-filters-body></div>
+      </aside>
+      <div class="grid" data-plp-grid></div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script>Lomode.renderFooter();</script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
